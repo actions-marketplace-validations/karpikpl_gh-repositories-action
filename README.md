@@ -107,7 +107,9 @@ jobs:
           script: |
             const fs = require('fs');
             // read summary file
-            const data = fs.readFileSync('${{ steps.gh_repo_report.outputs.file }}', 'utf8');
+            const data = fs.readFileSync(
+              '${{ steps.gh_repo_report.outputs.file }}',
+              'utf8');
             const csv = data.split('\n').map(row => row.split(';'))
             // header
             for (let i = 0; i < csv[0].length; i++) {
