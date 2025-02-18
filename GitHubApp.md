@@ -18,7 +18,9 @@ Set all required scopes for the app.
 - "Secrets" repository permissions (read)
 - "Environments" repository permissions (read)
 
- Read access to actions, administration, code, environments, members, metadata, organization actions variables, organization administration, organization secrets, and secrets
+Read access to actions, administration, code, environments, members, metadata,
+organization actions variables, organization administration, organization
+secrets, and secrets
 
 For Orgs:
 

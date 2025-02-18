@@ -12,7 +12,8 @@ Produce a CSV file with information about repositories. :rocket:
 
 Reading repositories information requires following permissions:
 
-- **Read access to actions, administration, code, environments, members, metadata, and secrets**
+- **Read access to actions, administration, code, environments, members,
+  metadata, and secrets**
 
 that cannot be granted to a workflow. Please either use a PAT or Application
 token:
@@ -106,7 +107,9 @@ jobs:
           script: |
             const fs = require('fs');
             // read summary file
-            const data = fs.readFileSync('${{ steps.gh_repo_report.outputs.file }}', 'utf8');
+            const data = fs.readFileSync(
+              '${{ steps.gh_repo_report.outputs.file }}',
+              'utf8');
             const csv = data.split('\n').map(row => row.split(';'))
             // header
             for (let i = 0; i < csv[0].length; i++) {
@@ -123,7 +126,8 @@ jobs:
 
 ### `github-pat`
 
-**Required** GitHub personal access token or application token with **Read access to actions, administration, code, environments, metadata, and secrets**
+**Required** GitHub personal access token or application token with **Read
+access to actions, administration, code, environments, metadata, and secrets**
 
 ### `github-org`
 
