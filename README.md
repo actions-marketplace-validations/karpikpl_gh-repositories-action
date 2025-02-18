@@ -12,8 +12,8 @@ Produce a CSV file with information about repositories. :rocket:
 
 Reading repositories information requires following permissions:
 
-- **Read access to actions, administration, code, environments, metadata, and
-  secrets**
+- **Read access to actions, administration, code, environments, members,
+  metadata, and secrets**
 
 that cannot be granted to a workflow. Please either use a PAT or Application
 token:
@@ -45,6 +45,7 @@ steps:
   with:
     app-id: ${{ vars.APP_ID }}
     private-key: ${{ secrets.PRIVATE_KEY }}
+    owner: your-org-name
 
 - name: GH Repositories Report
   id: gh_repo_report
