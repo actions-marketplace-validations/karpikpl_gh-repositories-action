@@ -1,7 +1,6 @@
 const { Parser } = require('@json2csv/plainjs')
 const core = require('@actions/core')
 const fs = require('fs')
-const { delimiter } = require('path')
 
 function toCSV(data, organization) {
   const opts = {
